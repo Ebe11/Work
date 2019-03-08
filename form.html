@@ -1,0 +1,134 @@
+<html>
+<head>
+
+<script type="text/javascript">
+function display(selectObj) {
+	var cSelect = document.getElementById("category");
+	var len=cSelect.options.length;
+	while (cSelect.options.length> 0) {
+		cSelect.remove(0);
+	}
+var categoryLists= new Array(2)
+categoryLists["empty"]=["select a category"];
+categoryLists["UG"]=["AERONAUTICAL ENGINEERING","MECHANICAL ENGINEERING"];
+categoryLists["PG"]=["MBA","MCA"];
+var idx=selectObj.selectedIndex;
+var which=selectObj.options[idx].value;
+cList=categoryLists[which];
+if(selectObj.options[idx].value=="UG")
+{
+	for(var=i=o;i<cList.length;i++)
+	{
+		newOption=document.createElement("option");
+		newOption.value=clists[i];
+		newOption.text=clist[i];
+		cSelect.add(newOption);
+	}
+}
+else
+{
+for(var=i=o;i<cList.length;i++)
+	{
+		newOption=document.createElement("option");
+		newOption.value=clists[i];
+		newOption.text=clist[i];
+		cSelect.add(newOption);
+	}
+	
+}
+}
+</script>
+</head>
+<body>
+<title><b>STUDENT ONLINE APPLICATION FORM</b></title>
+
+<form method="post">
+<table cellpadding="3" width="75%" cellspacing="3" bgcolor="lightblue">
+<h1 align="center">STUDENT ONLINE REGISTRATION FORM</h1>
+<table>
+<p><b>Personal Details</b></p>
+<table cellpadding="3" width="75%" cellspacing="3" bgcolor="lightblue">
+<tr>
+<td>Name of the Candidate:</td>
+<td> <input type="text" name="name" size="30"/></td>
+</tr>
+<tr>
+<td>Name of the Father:</td>
+<td> <input type="text" name="name1" size="30"/></td>
+</tr>
+<tr>
+<td>Date of Birth(DD/MM/YYYY):</td>
+<td> <input type="text" name="dob" size="30"/></td>
+</tr>
+<tr>
+<td>Address:</td>
+<td> <textarea name="add" rows="6" size="30"/></textarea></td>
+</tr>
+<tr>
+<td>Pincode:</td>
+<td> <input type="text" name="pin" size="30"/></td>
+</tr>
+<tr>
+<td>Email:</td>
+<td> <input type="text" name="ename" size="30"/></td>
+</tr>
+<tr>
+<td>Mobile Number:</td>
+<td> <input type="text" name="num" size="30"/></td>
+</tr>
+<tr>
+<td>Country:</td>
+<td><select><option>INDIA</option><option>ENGLAND</option><option>CHINA</option><option>AUSTRALIA</option><option>JAPAN</option><option>BELGIUM</option><option>AMERICA</option></select></td>
+</tr>
+<tr>
+<td>Gender:</td>
+<td> <input type="radio" name="gen"/>MALE<input type="radio" name="gen"/>FEMALE</td>
+</tr>
+<tr>
+<td>Nationality:</td>
+<td> <input type="radio" name="nat"/>INDIAN<input type="radio" name="nat"/>OTHER</td>
+</tr>
+<tr>
+<td>Religion:</td> 
+<td><input type="radio" name="rel"/>HINDU<input type="radio" name="rel"/>CHRISTIAN<input type="radio" name="rel"/>MUSLIM<input type="radio" name="rel"/>JAINISM<input type="radio" name="rel"/>BUDDHISM</td>
+</tr>
+</table>
+<p>EDUCATIONAL QUALIFICATIONS:<p>
+<table cellpadding="3" width="75%" cellspacing="3" bgcolor="lightblue"> 
+<tr>
+<td>Qualifications:</td>
+<td><input type="text" name="q" size="30"/></td>
+</tr>
+<tr>
+<td>Subject:</td>
+<td><input type="text" name="sub" size="30"/></td>
+</tr>
+<tr>
+<td>Name of the Board/University:</td>
+<td><input type="text" name="board" size="30"/></td>
+</tr>
+<tr>
+<td>Year of Completion:</td>
+<td><input type="text" name="year" size="30"/></td>
+</tr>
+<tr>
+<td>Percentage of Marks:</td>
+<td><input type="text" name="per" size="30"/></td>
+</tr>
+</table>
+<p>Course Selection</p>
+<table cellpadding="3" width="75%" cellspacing="3" bgcolor="lightblue"> 
+<tr>
+<td>Course Stream:</td>
+<td><select name="course" onchange="display(this)"><option value="empty">Select a Course</option><option value="UG">UG</option><option value="PG">PG</option></select></td>
+<tr>
+<td>Course Category:</td>
+<td><select id="category"><option value="empty">Select a Category</option><option value="Mainframe Systems">Mainframe Systems</option><option value="Information Technology">Information Technology</option></select></td>
+</tr>
+<tr>
+<td colspan="2" align="center"><input type="submit"/></td>
+</tr>
+</table>
+</form>
+</body>
+</html>
